@@ -1,3 +1,3 @@
 <template>
-    <div> recepty: </div>
+    <recipes/>
 </template>
