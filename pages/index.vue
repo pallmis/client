@@ -1,14 +1,10 @@
 <template>
   <div>
     <h1> AJAX tutoriál - úvodní stránka </h1>
-    <h3> odkazy </h3>
-    <ul>
-      <li> <NuxtLink to="/recepty"> recepty </NuxtLink> </li>
-    </ul>
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   asyncData() {
     return {
@@ -16,4 +12,4 @@ export default {
     }
   }
 }
-</script>
+</script> -->
