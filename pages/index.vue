@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> AJAX tutoriál - úvodní stránka </h1>
+    <h1> AJAX tutoriál </h1>
   </div>
 </template>
 

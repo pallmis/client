@@ -1,20 +1,3 @@
-<template>
-    <div>
-        <nav>
-            <ul>
-                <li> <NuxtLink to="/"> tutoriál </NuxtLink> </li>
-                <li> <NuxtLink to="/recepty"> recepty </NuxtLink> </li>
-            </ul>
-        </nav>
-        <div class="div1">
-            <p>  </p>
-        </div>
-        <main>
-            <Nuxt/>
-        </main>
-    </div>
-</template>
-
 <style>
 
 a.nuxt-link-active {
@@ -34,7 +17,7 @@ main {
 }
 
 .div1 {
-    background-color: #BDBDBD;
+    background-color: red;
     min-height: 50px;
 }
 
