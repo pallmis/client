@@ -1,12 +1,16 @@
 <template>
     <div>
+        <div class="recepies_div1">
+        </div>
         <h1> Recepty</h1>
         <p> zatím zde nejsou žádné recepty </p>
     </div>
 </template>
 
-<script>
-export default {
-    layout : 'recepty_layout'
+<style>
+
+.recepies_div1 {
+    background-color: burlywood;
+    min-height: 100px;
 }
-</script>
+</style>

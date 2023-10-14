@@ -6,12 +6,12 @@
                 <li> <NuxtLink to="/recepty"> recepty </NuxtLink> </li>
             </ul>
         </nav>
-        <div class="div1">
-            <p>  </p>
-        </div>
         <main>
             <Nuxt/>
         </main>
+        <footer>
+          <p>patička</p>
+        </footer>
     </div>
 </template>
 
@@ -27,15 +27,9 @@ a.nuxt-link-exact-active {
 
 main {
   margin: 0 auto;
-  padding: 0 1rem;
-  margin-top: 100px;
-  max-width: 1280px;
+  padding: 0;
+  margin-top: 0px;
   text-align: center;
-}
-
-.div1 {
-    background-color: #BDBDBD;
-    min-height: 50px;
 }
 
 ul {
@@ -59,6 +53,12 @@ a:visited {
 
 a:hover {
   color: #57C8FF;
+}
+
+footer {
+  background-color: #BDBDBD;
+  min-height: 50px;
+  text-align: center;
 }
 
 </style>
