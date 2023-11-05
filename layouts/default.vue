@@ -1,4 +1,14 @@
 <template>
+  <div>
+    <nuxt/>
+  </div>
+</template>
+
+<style>
+</style>
+
+
+<!-- <template>
     <div>
         <nav>
             <ul>
@@ -61,4 +71,4 @@ footer {
   text-align: center;
 }
 
-</style>
+</style> -->
