@@ -32,6 +32,7 @@
     async asyncData({ $axios, params }) {
       try {
         let recipes = await $axios.$get(`/recipes/`);
+        console.log(recipes);
         return { recipes };
       } catch (e) {
         return { recipes: [] };
