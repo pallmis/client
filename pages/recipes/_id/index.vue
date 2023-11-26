@@ -14,14 +14,14 @@
         </div>
         <div class="col-md-6">
           <div class="recipe-details">
-            <h4>Ingredients</h4>
+            <h4>Ingredience</h4>
             <p>{{ recipe.ingredients }}</p>
-            <h4>Preparation time</h4>
-            <p>{{ recipe.prep_time }} mins</p>
-            <h4>Difficulty</h4>
+            <h4>čas přípravy</h4>
+            <p>{{ recipe.prep_time }} minut</p>
+            <h4>obtížnost</h4>
             <p>{{ recipe.difficulty }}</p>
-            <h4>Preparation guide</h4>
-            <textarea class="form-control" rows="10" v-html="recipe.prep_guide" disabled />
+            <h4>postup</h4>
+            <textarea class="form-control" rows="10" v-html="recipe.prep_guide" readonly></textarea>
           </div>
         </div>
       </div>
@@ -36,11 +36,14 @@
       };
     },
     async asyncData({ $axios, params }) {
+      console.log(params.id);
       try {
-        let recipe = await $axios.$get(`/recipes/${params.id}`);
+        let recipe = await $axios.$get(`/recipes/${params.id}/`);
+        console.log(recipe);
         return { recipe };
       } catch (e) {
-        return { recipe: [] };
+        console.error(e);
+        return { recipe: null };
       }
     },
     data() {

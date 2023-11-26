@@ -4,13 +4,13 @@
         <div class="col-12 text-right mb-4">
           <div class="d-flex justify-content-between">
             <h3>Recepty</h3>
-            <nuxt-link to="/recipes/add" class="btn btn-info">Add Recipe</nuxt-link>
+            <nuxt-link to="/recipes/add" class="btn btn-info">přidat recept</nuxt-link>
           </div>
         </div>
         <template v-for="recipe in recipes">
           <div class="col-lg-3 col-md-4 col-sm-6 mb-4"> 
-            <!-- :key="recipe.id" -->
-            <recipe-card :onDelete="deleteRecipe" :recipe="recipe"></recipe-card>
+            <!-- :onDelete="deleteRecipe" -->
+            <recipe-card :key="recipe.id" :recipe="recipe"></recipe-card>
           </div>
         </template>
       </div>
@@ -43,17 +43,17 @@
         recipes: []
       };
     },
-    methods: {
-      async deleteRecipe(recipe_id) {
-        try {
-          await this.$axios.$delete(`/recipes/${recipe_id}/`); 
-          let newRecipes = await this.$axios.$get("/recipes/"); 
-          this.recipes = newRecipes; 
-        } catch (e) {
-          console.log(e);
-        }
-      }
-    }
+    // methods: {
+    //   async deleteRecipe(recipe_id) {
+    //     try {
+    //       await this.$axios.$delete(`/recipes/${recipe_id}/retrieve_by_id/`); 
+    //       let newRecipes = await this.$axios.$get("/recipes/"); 
+    //       this.recipes = newRecipes; 
+    //     } catch (e) {
+    //       console.log(e);
+    //     }
+    //   }
+    // }
   };
   </script>
   
