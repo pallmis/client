@@ -62,4 +62,9 @@
   </script>
   
   <style scoped>
+  a,
+  a:visited {
+  text-decoration: none;
+  color: none;
+  }
   </style>

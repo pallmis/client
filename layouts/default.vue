@@ -1,26 +1,18 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
-</template>
-
-<style>
-</style>
-
-
-<!-- <template>
     <div>
         <nav>
             <ul>
                 <li> <NuxtLink to="/"> tutoriál </NuxtLink> </li>
-                <li> <NuxtLink to="/recepty"> recepty </NuxtLink> </li>
+                <li> <NuxtLink to="/recipes"> recepty </NuxtLink> </li>
             </ul>
         </nav>
+        <!-- obsah -->
         <main>
             <Nuxt/>
         </main>
+        <!-- obsah -->
         <footer>
-          <p>patička</p>
+          <p></p>
         </footer>
     </div>
 </template>
@@ -40,6 +32,7 @@ main {
   padding: 0;
   margin-top: 0px;
   text-align: center;
+  min-height: 1000px;
 }
 
 ul {
@@ -71,4 +64,4 @@ footer {
   text-align: center;
 }
 
-</style> -->
+</style>

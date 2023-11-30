@@ -10,7 +10,7 @@
         <div class="action-buttons">
           <nuxt-link :to="`/recipes/${recipe.id}/`" class="btn btn-sm btn-success">zobrazit</nuxt-link>
           <nuxt-link :to="`/recipes/${recipe.id}/edit/`" class="btn btn-sm btn-primary">upravit</nuxt-link>
-          <!-- <button @click="onDelete(recipe.id)" class="btn btn-sm btn-danger">Delete</button> -->
+          <!-- <button @click="onDelete(recipe.id)" class="btn btn-sm btn-danger">smazat</button> -->
         </div>
       </div>
     </div>
@@ -25,8 +25,20 @@
   <style>
   .recipe-card {
       box-shadow: 0 1rem 1.5rem rgba(0,0,0,.6);
+      min-height: 250px;
   }
+
   .myimg {
     max-height: 200px;
+  }
+
+  .card-text{
+    min-height: 50px;
+  }
+
+  a,
+  a:visited {
+  text-decoration: none;
+  color: none;
   }
   </style>

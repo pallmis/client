@@ -48,7 +48,7 @@
                 <div class="form-group">
                   <label for>
                     čas přípravy
-                    <small>(minutes)</small>
+                    <small>(minuty)</small>
                   </label>
                   <input v-model="recipe.prep_time" type="number" class="form-control">
                 </div>
@@ -58,7 +58,7 @@
               <label for>postup</label>
               <textarea v-model="recipe.prep_guide" class="form-control" rows="8"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">uložit</button>
           </form>
         </div>
       </div>
@@ -123,4 +123,9 @@
   </script>
   
   <style scoped>
+  a,
+  a:visited {
+  text-decoration: none;
+  color: none;
+  }
   </style>

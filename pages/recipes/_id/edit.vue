@@ -19,7 +19,7 @@
               <input type="text" v-model="recipe.ingredients" class="form-control" name="Ingredients" >
             </div>
             <div class="form-group">
-              <label for>obrázek</label>
+              <label for="obrázek">obrázek</label>
               <input type="file" @change="onFileChange">
             </div>
             <div class="row">
@@ -36,7 +36,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for>
-                    čas přípravy
+                     čas přípravy
                     <small>(minutes)</small>
                   </label>
                   <input type="text" v-model="recipe.prep_time" class="form-control" name="Ingredients" >
@@ -100,10 +100,11 @@
         reader.readAsDataURL(file);
       },
       async submitRecipe() {
-        let editedRecipe = this.recipe
-        if (editedRecipe.picture.name.indexOf("http://") != -1){
-          delete editedRecipe["picture"]
-        }
+        let editedRecipe = this.recipe;
+        console.log("editedRecipe:", editedRecipe);
+        // if (editedRecipe.picture && typeof editedRecipe.picture === 'object' && editedRecipe.picture.name && editedRecipe.picture.name.indexOf("http://") !== -1) {
+        //   delete editedRecipe["picture"]
+        // }
         const config = {
           headers: { "content-type": "multipart/form-data" }
         };
@@ -113,14 +114,20 @@
         }
         try {
           let response = await this.$axios.$patch(`/recipes/${editedRecipe.id}/`, formData, config);
+          console.log("response:", response);
           this.$router.push("/recipes/");
         } catch (e) {
-          console.log(e);
+          console.log("error:",e);
         }
       }
     }
   };
-  </script>
+  </script>;
   
   <style scoped>
+  a,
+  a:visited {
+  text-decoration: none;
+  color: none;
+  }
   </style>
