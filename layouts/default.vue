@@ -6,9 +6,15 @@
                 <li> <NuxtLink to="/recipes"> recepty </NuxtLink> </li>
             </ul>
         </nav>
+        <nav v-if="showDefaultNav" class="grey">
+            <ul>
+                <li> <NuxtLink to="/recipes"> recepty </NuxtLink> </li>
+                <li> <NuxtLink to="/recipes/login"> přihlášení </NuxtLink> </li>
+            </ul>
+        </nav>
         <!-- obsah -->
         <main>
-            <Nuxt/>
+            <Nuxt />
         </main>
         <!-- obsah -->
         <footer>
@@ -16,6 +22,16 @@
         </footer>
     </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    showDefaultNav() {
+      return this.$route.path === '/recipes' || this.$route.path === '/recipes/login';
+    },
+  },
+};
+</script>
 
 <style>
 
@@ -64,4 +80,7 @@ footer {
   text-align: center;
 }
 
+.grey {
+  background-color: #BDBDBD;
+}
 </style>

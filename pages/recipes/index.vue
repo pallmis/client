@@ -27,7 +27,7 @@
       };
     },
     components: {
-      RecipeCard
+      RecipeCard,
     },
     async asyncData({ $axios, params }) {
       try {
@@ -43,20 +43,9 @@
         recipes: []
       };
     },
-    // methods: {
-    //   async deleteRecipe(recipe_id) {
-    //     try {
-    //       await this.$axios.$delete(`/recipes/${recipe_id}/retrieve_by_id/`); 
-    //       let newRecipes = await this.$axios.$get("/recipes/"); 
-    //       this.recipes = newRecipes; 
-    //     } catch (e) {
-    //       console.log(e);
-    //     }
-    //   }
-    // }
   };
   </script>
-  
+
   <style scoped>
   a,
   a:visited {
