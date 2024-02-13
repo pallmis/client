@@ -58,7 +58,7 @@
   export default {
     head(){
         return {
-          title: "Edit Recipe"
+          title: "úprava receptu"
         }
       },
     async asyncData({ $axios, params }) {

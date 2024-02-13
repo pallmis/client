@@ -32,7 +32,7 @@
   export default {
     head() {
       return {
-        title: "View Recipe"
+        title: "recept"
       };
     },
     async asyncData({ $axios, params }) {
