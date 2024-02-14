@@ -9,7 +9,8 @@
         <nav v-if="showDefaultNav" class="grey">
             <ul>
                 <li> <NuxtLink to="/recipes"> recepty </NuxtLink> </li>
-                <li> <NuxtLink to="/recipes/login"> přihlášení </NuxtLink> </li>
+                <li> <NuxtLink to="/recipes/login"> přihlášení </NuxtLink> </li> <!-- změnit: login pro nepřihlášené, účet pro přihlášené -->
+                <li> <NuxtLink to="/recipes/register"> registrace </NuxtLink> </li> <!-- změnit: zmizet pro přihlášené -->
             </ul>
         </nav>
         <!-- obsah -->
@@ -27,7 +28,7 @@
 export default {
   computed: {
     showDefaultNav() {
-      return this.$route.path === '/recipes' || this.$route.path === '/recipes/login';
+      return this.$route.path.includes("/recipes");
     },
   },
 };
@@ -59,6 +60,7 @@ ul {
   flex-wrap: wrap;
 }
 li {
+  font-weight: bold;
   margin: 0 0.5rem;
   padding: 0.25rem;
   font-size: 1.2rem;
