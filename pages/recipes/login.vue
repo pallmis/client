@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     head() {
       return {
@@ -29,9 +31,18 @@ export default {
         }
     },
     methods: {
-        submitForm() {
-            
-        }
+        async submitForm() {
+            try {
+                const response = await axios.post('/recipes/login/', {  // Django request 
+                    username: this.username,
+                    password: this.password,
+                });
+                console.log(response.data);
+                this.$router.push('/recipes/'); // udělat stránku uživatele, změnit /recipes/ na /recipes/user/
+          } catch (error) {
+                console.error(error);
+            }
+        },
     },
 }
 </script>
