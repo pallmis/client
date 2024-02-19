@@ -4,15 +4,15 @@
         <form @submit.prevent="submitForm">
             <div class="form-group">
                 <label for class=""> uživatelské jméno </label>
-                <input type="text" name="username" class="">
+                <input type="text" v-model="username">
             </div> 
             <div class="form-group">
                 <label for> heslo </label>
-                <input type="password" name="password">
+                <input type="password" v-model="password">
             </div>
             <div class="form-group">
                 <label for> heslo znovu </label>
-                <input type="password" name="password2">
+                <input type="password" v-model="password2">
             </div> 
             <button type="submit"> registrovat se </button>
         </form>
@@ -38,7 +38,7 @@ export default {
     methods: {
         async submitForm() {
             try {
-                const response = await axios.post('http://localhost:8000/dlouhodobka/recipes/register/', {   // Django request
+                const response = await axios.post('http://localhost:8000/dlouhodobka/user/register/', {   // Django request
                     username: this.username,
                     password: this.password,
                     password2: this.password2,

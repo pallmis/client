@@ -33,7 +33,7 @@ export default {
     methods: {
         async submitForm() {
             try {
-                const response = await axios.post('/recipes/login/', {  // Django request 
+                const response = await axios.post('/users/login/', {  // Django request 
                     username: this.username,
                     password: this.password,
                 });
